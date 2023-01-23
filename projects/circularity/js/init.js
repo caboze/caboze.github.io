@@ -32,12 +32,14 @@ function drawCircle(){
 }
 
         // TODO 3 / 7 : Call the drawCircle() function 
-drawCircle();
-drawCircle();
-drawCircle();
-drawCircle();
-drawCircle();
-
+//.  start:perfect
+//           stop: we want our loop to run as long as the value of i is less than or equal to 100
+// great work on update condition. it's perfect
+for (var i = 0; i <= 100; i++) {
+    drawCircle(100); 
+}
+//not quite. the drawCircle function should have no arguments.
+//check out the loops lesson in greenlight to see the syntax for a for loop
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -48,19 +50,13 @@ drawCircle();
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(circles[0]);
-            physikz.updatePosition(circles[1]);
-            physikz.updatePosition(circles[2]);
-            physikz.updatePosition(circles[3]);
-            physikz.updatePosition(circles[4]);
-            // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            game.checkCirclePosition(0);
-            game.checkCirclePosition(1);
-            game.checkCirclePosition(2);
-            game.checkCirclePosition(3);
-            game.checkCirclePosition(4);
-            // TODO 9 : Iterate over the array
-           
+            for (var i = 0; circles.length; i++) {
+                var eachCircle = circles[i];
+                physikz.updatePosition(circles[0]);
+                game.checkCirclePosition(0);
+            }
+                        // TODO 9 : Iterate over the array
+           // 
             
         }
     
@@ -89,7 +85,7 @@ drawCircle();
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
-        /////////////////////////////////////////////////////////////
+        ///////////////////0//////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
         
